@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 1</title>
+</head>
+
+<body>
+    <button onClick="myFirstScript()">Задание 1</button>
+    <button onClick="mySecondScript()">Задание 2 (необходимо открыть консоль)</button>
+    <button onClick="myThirdScript()">Задание 3 (необходимо открыть консоль)</button>
+    <script>
+        function myFirstScript() {
+            let Tc = prompt("Введите температуру (в градусах Цельсия)");
+            let Tf = ((9 / 5) * Tc + 32);
+            alert(Tc + " градус Цельсия = " + Tf + " градус Фаренгейта")
+        }
+
+        function mySecondScript() {
+            let name = "Василий"
+            let admin = name
+            console.log(admin)
+        }
+
+        function myThirdScript() {
+            let result1 = 10 + 10 + "10";
+            console.log('10 + 10 + "10"')
+            console.log(result1)
+            console.log("1. 10 плюс 10 получаем 20\n\n2. 20 (число) плюс '10' (строка) получаем '2010' (строка)\n\n3. '2010' присваиваем переменной result\n\n4. с помощью console.log выводим result в консоль")
+            console.log("\n\n\n")
+
+            let result2 = 10 + "10" + 10;
+            console.log('10 + "10" + 10')
+            console.log(result2)
+            console.log("1. 10 (число) плюс '10' (строка) получаем '1010' (строка)\n\n2. '1010' (строка) плюс 10 (число) получаем '101010' (строка)\n\n3. '101010' присваиваем переменной result\n\n4. с помощью console.log выводим result в консоль")
+            console.log("\n\n\n")
+
+            let result3 = 10 + 10 + +"10";
+            console.log('10 + 10 + +"10"')
+            console.log(result3)
+            console.log("1. Изменяем тип последнего слагаемого со строки на число\n\n2. В итоге получаем в выражении 3 слагаемых, которые являются числами, и просто складываем. Получаем 30\n\n3. 30 присваиваем переменной result\n\n4. с помощью console.log выводим result в консоль")
+            console.log("\n\n\n")
+
+            let result4 = 10 / -"";
+            console.log('10 / -""')
+            console.log(result4)
+            console.log("1. Унарный минус преобразует строку в число и делает его отрицательным. В данном случае из пустой строки получаем -0\n\n2. 10 делим на -0 и получаем минус бесконечность\n\n3. минус бесконечность присваиваем переменной result\n\n4. с помощью console.log выводим result в консоль")
+            console.log("\n\n\n")
+
+            let result5 = 10 / +"2,5";
+            console.log('10 / +"2,5"')
+            console.log(result5)
+            console.log("1. Пытаемся строку '2,5' преобразовать в число, но получаем NaN (не число), так как для дробных чисел используется точка, а не запятая\n\n2. 10 делим на NaN и получаем NaN\n\n3. NaN присваиваем переменной result\n\n4. с помощью console.log выводим result в консоль")
+        }
+    </script>
+
+
+
+</body>
+
+</html>
